@@ -1,38 +1,46 @@
-html,body {
-    margin: 0;
-    padding: 0;
-}
-.navbar {background-color:rgb(42, 181, 245);}
 
-    .navbar-nav {
-        font-size: 18px;
-        font-weight: bold;
-        width: 320px;
+    .sideMenu {
         height: 100%;
-        text-align: center;
-        background-color: rgba(116, 116, 116, 0.986);
+        width: 0;
+        top: 0;
+        left: 0;
         position: fixed;
-        z-index: 99;
-        left: 0px;
-        overflow: hidden;
-        -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.12);
-        -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.12);
-        box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.12);
-        -webkit-transition: right 7000ms ease-out;
-        -moz-transition: right 7000ms ease-out;
-        -ms-transition: right 7000ms ease-out;
-        -o-transition: right 7000ms ease-out;
-        transition: right 7000ms ease-out; 
-        animation-name: lft-transit;
-        animation-duration: 7s;
-        margin-top: 8px;
+        z-index: 1;        
+        background-color: #111;
+        transition: 0.5s;
+        padding-top: 50px;
+        overflow-x: hidden;
+        text-align: center;
     }
-    
-    .botaofechar {height: 28px;}
 
-    @keyframes lft-transit {
-        0% { opacity: 0.3; transform: translate(-2000px, 0px)}
-        25% { opacity: 0.5; transform: translate(0px, 0px)}
-        25% { opacity:0.8; transform: translate(0px, 0px)}
-        100% {opacity: 1; transform: translate(0px,0px)}
+    .lista-link:hover {
+        text-decoration: none;
+        color: rgba(0, 174, 255, 0.657);
     }
+
+    .sideMenu a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 22px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .closeBtn {
+        position: absolute;
+        top: 5px;        
+        font-size: 30px;        
+        margin-left:100px;
+    }
+
+    #main_menu {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+
+
+    @media screen and (max-height: 450px) {
+        .sideMenu {padding-top: 15px;}
+        .sideMenu a {font-size: 18px;}
+    } 
